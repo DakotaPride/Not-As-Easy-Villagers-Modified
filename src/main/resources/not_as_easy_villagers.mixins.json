@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "igoro00.not_as_easy_villagers.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "MobEntityMixin"
+  ],
+  "client": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

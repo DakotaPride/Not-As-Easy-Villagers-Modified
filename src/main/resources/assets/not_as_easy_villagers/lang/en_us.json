@@ -1,0 +1,6 @@
+{
+  "item.not_as_easy_villagers.villager": "Villager",
+  "chat.not_as_easy_villagers.cannot_spawn": "Couldn't spawn a villager!",
+  "chat.not_as_easy_villagers.cannot_spawn.pillager": "Couldn't spawn a pillager!",
+  "item.not_as_easy_villagers.pillager": "Pillager"
+}
