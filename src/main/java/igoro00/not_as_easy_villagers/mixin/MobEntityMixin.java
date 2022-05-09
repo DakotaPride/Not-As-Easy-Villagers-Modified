@@ -86,7 +86,34 @@ public class MobEntityMixin {
                 entity.remove(Entity.RemovalReason.DISCARDED);
                 info.setReturnValue(ActionResult.SUCCESS);
             }
+         /*   else if (entity.getType() == GuardVillagers.GUARD_VILLAGER && playerEntity.isSneaking()) {
+                if (entity.isLeashed()) entity.detachLeash(true, true);
+                entity.fallDistance = 0;
+                NbtCompound tag = new NbtCompound();
+                entity.saveSelfNbt(tag);
 
+                // it'll generate new UUID on spawn.
+                //It allows to spawn multiple guard villagers from one item in creative.
+                tag.remove("UUID");
+
+                ItemStack guardItemStack = new ItemStack(Registry.ITEM.get(
+                        new Identifier("not_as_easy_villagers","villager")
+                ));
+
+                NbtCompound guardItemNbt = guardItemStack.getOrCreateNbt();
+                guardItemNbt.put("Entity", tag);
+                if(tag.contains("CustomName")){
+                    Gson gson = new Gson();
+                    CustomName name = gson.fromJson(tag.getString("CustomName"), CustomName.class);
+                    guardItemStack.setCustomName(new LiteralText(name.text));
+                }
+                guardItemStack.setNbt(guardItemNbt);
+
+                playerEntity.getInventory().addPickBlock(guardItemStack);
+                entity.remove(Entity.RemovalReason.DISCARDED);
+                info.setReturnValue(ActionResult.SUCCESS);
+            }
+        */
             if (entity.getType() == EntityType.PILLAGER && playerEntity.isSneaking()) {
                 if (entity.isLeashed()) entity.detachLeash(true, true);
                 entity.fallDistance = 0;
